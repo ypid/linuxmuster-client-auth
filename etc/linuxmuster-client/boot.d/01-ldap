@@ -11,6 +11,8 @@ fi
 TEMPLATESDIR="/var/lib/linuxmuster-client-auth/templates"
 
 # determine client ip
+# FIXME: You could also read /var/lib/dhcp/dhclient.leases
+# grep dhcp-server-identifier /var/lib/dhcp/dhclient.leases |head --lines=1 | sed 's/.*dhcp-server-identifier \(.*\);/\1/'
 clientip=`ifconfig  | grep 255.240.0.0 | awk '{print $2}' | awk -F: '{print $2}'`
 clientname=`host $clientip | awk '{print $5}' | cut -d. -f1`
 # determine servername

@@ -6,7 +6,7 @@
 
 # When AUTOCONFIGURE_LDAP="YES" (uppercase!)
 # then the package tries to determie basedn and
-# ldap serverip at boot-time automagically...
+# ldap serverip at boot-time automatically...
 AUTOCONFIGURE_LDAP="YES"
 # User settings
 ADMINISTRATOR="administrator"
